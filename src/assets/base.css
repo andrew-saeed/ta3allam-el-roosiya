@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ter-white: #ffffff;
+  --ter-white-soft: #fefae0;
+  --ter-white-mute: #eae6cf;
+
+  --ter-black: #181818;
+  --ter-black-soft: #282828;
+  --ter-black-mute: #222222;
+
+  --ter-indigo: #2c3e50;
+
+  --ter-divider-light-1: rgba(60, 60, 60, 0.29);
+  --ter-divider-light-2: rgba(60, 60, 60, 0.12);
+  --ter-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --ter-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --ter-text-light-1: var(--vt-c-indigo);
+  --ter-text-light-2: rgba(60, 60, 60, 0.66);
+  --ter-text-dark-1: var(--vt-c-white);
+  --ter-text-dark-2: rgba(235, 235, 235, 0.64);
+
+  --ter-text-sm:0.75rem;       /* 12px */
+  --ter-text-sm-1: 0.875rem;    /* 14px */
+  --ter-text-base: 1rem;        /* 16px */
+  --ter-text-base-1: 1.125rem;  /* 18px */
+  --ter-text-base-2: 1.25rem;   /* 20px */ 
+  --ter-text-medium: 1.375rem;  /* 22px */
+  --ter-text-medium-1: 1.5rem;  /* 24px */
+  --ter-text-medium-2: 1.75rem; /* 28px */
+  --ter-text-large: 2.25rem;    /* 36px */
+  --ter-text-xlarge: 3.75rem;   /* 60px */
+  --ter-text-xxlarge: 5rem;     /* 80px */
+
+  --ter-line-h-sm: 1.375rem;        /* 22px */
+  --ter-line-h-sm-1: 1.5rem;        /* 24px */
+  --ter-line-h-base: 1.625rem;      /* 26px */
+  --ter-line-h-base-1: 1.75rem;     /* 28px */
+  --ter-line-h-base-2: 1.875rem;    /* 28px */
+  --ter-line-h-medium: 2rem;        /* 32px */
+  --ter-line-h-medium-1: 2.125rem;  /* 34px */
+  --ter-line-h-medium-2: 2.375rem;  /* 38px */
+  --ter-line-h-large: 2.875rem;     /* 46px */
+  --ter-line-h-xlarge: 4.375rem;    /* 70px */
+  --ter-line-h-xxlarge: 5.625rem;   /* 90px */
+}
+
+body {
+  font-size: var(--ter-text-base);
+}
