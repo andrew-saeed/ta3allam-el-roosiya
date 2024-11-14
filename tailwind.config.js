@@ -1,20 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      colors: {
-        'white': 'var(--ter-white)',
-        'white-soft': 'var(--ter-white-soft)',
-        'white-mute': 'var(--ter-white-mute)',
-        'black': 'var(--ter-black)',
-        'black-soft': 'var(--ter-black-soft)',
-        'black-mute': 'var(--ter-black-mute)',
-        'indigo': 'var(--ter-indigo)'
-      },
       screens: {
         'xs': '320px',
         'sm': '425px',
@@ -54,6 +46,6 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-primeui')],
 }
 
