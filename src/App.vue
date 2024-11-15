@@ -7,13 +7,13 @@ import LangPicker from './components/LangPicker.vue'
 
 <template>
   <header class="space-y-8">
-    <section class="text-center space-y-4">
+    <section class="text-center capitalize space-y-4">
       <div class="flex">
         <LangPicker />
       </div>
       <img class="w-40 h-40 mx-auto" src="/logo.png" alt="">
-      <p class="text-xlarge text-blue-400 font-bold">تعلم الروسية</p>
-      <p class="text-medium">تعلم اللغة الروسية من خلال مجموعة متنوعة من الدروس و التدريبات</p>
+      <p class="text-xlarge text-blue-400 font-bold">{{ $t('message.learnRussianTitle') }}</p>
+      <p class="text-medium">{{ $t('message.learnRussianDescription') }}</p>
     </section>
     <Nav />
   </header>

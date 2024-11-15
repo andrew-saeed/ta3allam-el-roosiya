@@ -6,6 +6,6 @@ const appStore = useAppStore()
 </script>
 
 <template>
-  <PageLayout title="الدروس">
+  <PageLayout :title="$t('message.pages.start.title')">
   </PageLayout>
 </template>

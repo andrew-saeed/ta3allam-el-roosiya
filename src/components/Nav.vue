@@ -3,8 +3,8 @@ import { RouterLink } from 'vue-router'
 </script>
 <template>
     <nav class="flex justify-center">
-        <RouterLink to="/">مرحباً</RouterLink>
-        <RouterLink to="/start">ابدا</RouterLink>
+        <RouterLink to="/">{{ $t('message.nav.hello') }}</RouterLink>
+        <RouterLink to="/start">{{ $t('message.nav.start') }}</RouterLink>
     </nav>
 </template>
 <style scoped>
@@ -12,6 +12,7 @@ import { RouterLink } from 'vue-router'
         display: block;
         font-size: var(--ter-text-base-2);
         font-weight: bold;
+        text-transform: capitalize;
         border-radius: 0.375rem;
         padding: 0.5rem 1rem;
         margin: 0 0.3rem;
