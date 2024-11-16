@@ -3,19 +3,23 @@ import { defineStore } from 'pinia'
 import i18n from '@/i18n'
 import type { SelectChangeEvent } from 'primevue'
 
-type Lang = {id: "ar" | "en", name: string, dir: "rtl" | "ltr"}
+type Lang = {id: 'ar' | 'en', name: string, dir: 'rtl' | 'ltr'}
 type LangID = Lang['id']
 type LangDir = Lang['dir']
-type AppConfig = {lang: LangID}
+type AppConfig = {lang: LangID, darkMode: boolean}
+
+const defaultConfig = `{"lang": "ar", "darkMode": false}`
 
 export const useAppStore = defineStore('app', () => {
   const htmlElement = document.documentElement
-  const defaultConfig:AppConfig = {"lang": "ar"}
-  const terAppConfig:AppConfig = JSON.parse(localStorage.getItem("terAppConfig") || `${defaultConfig}`)
+  const terAppConfig:AppConfig = JSON.parse(localStorage.getItem('terAppConfig') || defaultConfig)
   const updateLangUi = (id:LangID, dir:LangDir) => {
     htmlElement.lang = id
     htmlElement.dir = dir
     i18n.global.locale = id
+  }
+  const updateDarkModeClass = (darkMode:boolean) => {
+    darkMode ? htmlElement.classList.add('dark') : htmlElement.classList.remove('dark')
   }
   
   const langs = ref<Lang[]>([
@@ -23,13 +27,23 @@ export const useAppStore = defineStore('app', () => {
     {id: 'en', name: 'english', dir: 'ltr'},
   ])
 
+  const darkMode = ref(terAppConfig.darkMode)
+  updateDarkModeClass(darkMode.value)
+
   const currentLang = ref(langs.value.filter(lang => lang.id === terAppConfig.lang)[0])
   updateLangUi(currentLang.value.id, currentLang.value.dir)
 
   const toggleLang = (e:SelectChangeEvent) => {
     updateLangUi(e.value.id, e.value.dir)
-    localStorage.setItem("terAppConfig", `{"lang":"${e.value.id}"}`)
+    terAppConfig.lang = e.value.id
+    localStorage.setItem("terAppConfig", JSON.stringify(terAppConfig))
   }
 
-  return { langs, currentLang, toggleLang }
+  const toggleDarkMode = () => {
+    htmlElement.classList.toggle('dark')
+    terAppConfig.darkMode = !terAppConfig.darkMode
+    localStorage.setItem("terAppConfig", JSON.stringify(terAppConfig))
+  }
+
+  return { langs, currentLang, toggleLang, darkMode, toggleDarkMode }
 })

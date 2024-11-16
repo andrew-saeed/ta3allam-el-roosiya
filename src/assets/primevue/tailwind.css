@@ -4,6 +4,7 @@
 @import './iconfield';
 @import './inputtext';
 @import './select';
+@import './toggleswitch';
 
 /* Button */
 @import './button';
