@@ -7,7 +7,7 @@ const i18n = createI18n({
         ar: {
             message: {
                 'learnRussianTitle': 'تعلم الروسية',
-                'learnRussianDescription': 'تعلم اللغة الروسية من خلال مجموعة متنوعة من الدروس و التدريبات',
+                'learnRussianDescription': 'رحلتك مع اللغة الروسية تبدأ هنا مع مجموعة متنوعة من الدروس والتمارين.',
                 'nav': {
                     'start': 'ابدأ',
                     'hello': 'مرحباً'
@@ -17,7 +17,10 @@ const i18n = createI18n({
                         'title': 'الدروس'
                     },
                     'home': {
-                        'title': 'عن التطبيق'
+                        'title': 'عن التطبيق',
+                        'description': 'Ta3allam El Roosiya هو تطبيق ويب مفتوح المصدر يهدف إلى مساعدة الجميع (بما فيهم أنا) على تعلم اللغة الروسية وفهم أساسيات اللغة.',
+                        'target': 'من خلال مجموعة من التمارين و الدروس احاول ان اجعل التطبيق مفيد لكل الراغبين في تعلم اللغة الروسية.',
+                        'feedback': 'ملاحظاتك مهمة جداً'
                     }
                 }
             }
@@ -25,7 +28,7 @@ const i18n = createI18n({
         en: {
             message: {
                 'learnRussianTitle': 'learn russian',
-                'learnRussianDescription': 'Learn Russian with a Variety of Lessons and Exercises',
+                'learnRussianDescription': 'your journey with the Russian language begins here with a variety of lessons and exercises.',
                 'nav': {
                     'start': 'start',
                     'hello': 'hello'
@@ -35,7 +38,10 @@ const i18n = createI18n({
                         'title': 'lessons'
                     },
                     'home': {
-                        'title': 'about the app'
+                        'title': 'about the app',
+                        'description': 'Ta3allam El Roosiya is an open source web application that aims to help everyone (including me) learn Russian and understand the basics of the language.',
+                        'target': 'Through a set of exercises and lessons, I try to make the application useful for all those who wish to learn the Russian language.',
+                        'feedback': 'Your feedback is much appreciated!'
                     }
                 }
             }

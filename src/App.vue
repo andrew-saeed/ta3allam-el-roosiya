@@ -7,7 +7,7 @@ import ModePicker from './components/ModePicker.vue'
 </script>
 
 <template>
-  <header>
+  <header class="self-center">
     <section class="text-center capitalize">
       <div class="ctrls flex justify-between">
         <LangPicker />
@@ -15,8 +15,8 @@ import ModePicker from './components/ModePicker.vue'
       </div>
       <div class="hero mt-12 space-y-2">
         <img class="w-40 h-40 mx-auto" src="/logo.png" alt="">
-        <p class="text-xlarge text-blue-400 font-bold">{{ $t('message.learnRussianTitle') }}</p>
-        <p class="text-medium">{{ $t('message.learnRussianDescription') }}</p>
+        <p class="text-xlarge leading-xlarge text-primary-400 font-bold">{{ $t('message.learnRussianTitle') }}</p>
+        <p class="text-medium leading-medium">{{ $t('message.learnRussianDescription') }}</p>
       </div>
     </section>
     <div class="mt-12">
@@ -24,7 +24,7 @@ import ModePicker from './components/ModePicker.vue'
     </div>
   </header>
 
-  <main class="mt-4">
+  <main class="bg-primary-900 dark:bg-surface-700 text-surface-0 px-4 py-2 rounded-md">
     <RouterView />
   </main>
 </template>
