@@ -22,8 +22,8 @@ onMounted(() => {
 
 <template>
 
-    <header ref="header" class="self-center w-full pb-12 transition-[width,max-height,opacity] duration-300 ease-in-out overflow-hidden" :class="{'!w-0 !max-h-0 opacity-0':isExpanded}">
-        <div class="header__box">
+    <header ref="header" class="self-center w-full transition-[width,max-height,opacity] duration-300 ease-in-out overflow-hidden" :class="{'!w-0 !max-h-0 opacity-0':isExpanded}">
+        <div class="header__box pb-12 md:pb-0">
             <section class="text-center capitalize">
                 <div class="ctrls flex justify-between">
                     <LangPicker />
