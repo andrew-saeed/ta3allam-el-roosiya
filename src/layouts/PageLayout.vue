@@ -4,9 +4,12 @@ defineProps<{
 }>()
 import PageTitle from '@/components/PageTitle.vue'
 </script>
+
 <template>
+
     <div id="page-layout">
         <PageTitle :text="title"></PageTitle>
         <slot />
     </div>
+    
 </template>
