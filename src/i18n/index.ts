@@ -6,8 +6,10 @@ const i18n = createI18n({
     messages: {
         ar: {
             message: {
-                'learnRussianTitle': 'تعلم الروسية',
-                'learnRussianDescription': 'رحلتك مع اللغة الروسية تبدأ هنا مع مجموعة متنوعة من الدروس والتمارين.',
+                'header': {
+                    'title': 'تعلم الروسية',
+                    'description': 'رحلتك مع اللغة الروسية تبدأ هنا مع مجموعة متنوعة من الدروس والتمارين.'
+                },
                 'nav': {
                     'start': 'ابدأ',
                     'hello': 'مرحباً'
@@ -27,8 +29,10 @@ const i18n = createI18n({
         },
         en: {
             message: {
-                'learnRussianTitle': 'learn russian',
-                'learnRussianDescription': 'your journey with the Russian language begins here with a variety of lessons and exercises.',
+                'header': {
+                    'title': 'learn russian',
+                    'description': 'your journey with the Russian language begins here with a variety of lessons and exercises.'
+                },
                 'nav': {
                     'start': 'start',
                     'hello': 'hello'

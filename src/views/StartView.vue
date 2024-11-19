@@ -3,7 +3,9 @@ import PageLayout from '@/layouts/PageLayout.vue'
 </script>
 
 <template>
+
   <PageLayout :title="$t('message.pages.start.title')">
-    <button @click="$emit('expandPage')">tesing emit</button>
+    <p>page content</p>
   </PageLayout>
+
 </template>
