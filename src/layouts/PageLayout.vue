@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import { useAppStore } from '@/stores/app'
 
 import PageTitle from '@/components/PageTitle.vue'
-import IconBtn from '@/components/IconBtn.vue'
-import Expand from '@/components/icons/Expand.vue'
-import Close from '@/components/icons/Close.vue'
+import CloseLesson from '@/components/CloseLesson.vue'
 
 defineProps<{
     title: string
 }>()
-
-const appStore = useAppStore()
 </script>
 
 <template>
@@ -19,10 +14,7 @@ const appStore = useAppStore()
 
         <div id="page__header" class="flex items-center">
             <div class="grow-0">
-                <IconBtn @click="appStore.toggleAppContentExpand()">
-                    <Close v-show="appStore.appContentExpand" />
-                    <Expand v-show="!appStore.appContentExpand" />
-                </IconBtn>
+                <CloseLesson />
             </div>
             <div class="grow">
                 <PageTitle :text="title"></PageTitle>

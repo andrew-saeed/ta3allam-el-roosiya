@@ -14,6 +14,11 @@ const router = createRouter({
       name: 'start',
       component: () => import('../views/StartView.vue'),
     },
+    {
+      path: '/alphabet',
+      name: 'alphabet',
+      component: () => import('../views/AlphabetView.vue'),
+    },
   ],
   linkActiveClass: 'bg-blue-400 text-surface-50 shadow-[1px_1px_4px_1px_rgba(18,18,23,0.3)]'
 })

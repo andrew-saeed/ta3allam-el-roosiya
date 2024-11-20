@@ -56,9 +56,9 @@ export const useAppStore = defineStore('app', () => {
     appContentExpand.value = !appContentExpand.value
   }
 
-  return { 
+  return {
     langs, 
-    currentLang, 
+    currentLang,
     darkMode,
     appContentExpand,
     toggleLang,
