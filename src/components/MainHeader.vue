@@ -17,15 +17,15 @@ onMounted(() => {
 
     <header ref="header" class="self-center w-full transition-[width,max-height,opacity] duration-300 ease-in-out overflow-hidden">
         <div class="header__box pb-12 md:pb-0">
-            <section class="text-center capitalize">
+            <section class="text-center capitalize space-y-12">
                 <div class="ctrls flex justify-between">
                     <LangPicker />
                     <ModePicker />
                 </div>
-                <div class="hero mt-12 space-y-2">
-                    <img class="w-40 h-40 mx-auto" src="/logo.png" alt="">
+                <img class="w-40 h-40 mx-auto" src="/logo.png" alt="">
+                <div class="hero">
                     <p class="text-xlarge leading-xlarge text-primary-400 font-bold">{{ $t('message.header.title') }}</p>
-                    <p class="text-medium leading-medium">{{ $t('message.header.description') }}</p>
+                    <p class="text-medium leading-medium mt-6">{{ $t('message.header.description') }}</p>
                 </div>
             </section>
             <div class="mt-12">
