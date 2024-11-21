@@ -145,7 +145,7 @@ const playSound = (file) => {
                                     </IconBtn>
                                 </p>
                             </div>
-                            <p class="capitalize">{{ example.word }}</p>
+                            <p class="capitalize">{{ $t(`message.dictionary['${example.id}']`) }}</p>
                         </li>
                     </ul>
                 </li>
