@@ -1,10 +1,9 @@
 <script setup lang="ts">
 
 import PageTitle from '@/components/PageTitle.vue'
-import CloseLesson from '@/components/CloseLesson.vue'
 
 defineProps<{
-    title: string
+    title?: string
 }>()
 </script>
 
@@ -12,13 +11,8 @@ defineProps<{
 
     <div id="page-layout">
 
-        <div id="page__header" class="flex items-center">
-            <div class="grow-0">
-                <CloseLesson />
-            </div>
-            <div class="grow">
-                <PageTitle :text="title"></PageTitle>
-            </div>
+        <div id="page__header" class="my-6">
+            <PageTitle v-if="title" :text="title"></PageTitle>
         </div>
 
         <div id="page__content">

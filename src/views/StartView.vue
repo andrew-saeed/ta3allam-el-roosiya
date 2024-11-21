@@ -18,10 +18,10 @@ const openLesson = (slug:string) => {
 
 <template>
 
-  <PageLayout :title="$t('message.pages.start.title')" class="h-full grid grid-rows-[min-content_1fr]">
+  <PageLayout class="h-full grid grid-rows-[min-content_1fr]">
     <div class="h-full relative overflow-auto">
-      <ul class="w-full md:absolute top-0 left-0 grid gap-8 md:px-2 py-8">
-        <li v-for="lesson in lessons" class="h-full flex gap-2 bg-primary-400 text-medium font-bold capitalize p-2 rounded-md" @click="openLesson(lesson.slug)">
+      <ul class="w-full md:absolute top-0 left-0 grid gap-8 md:px-2 pb-8">
+        <li v-for="lesson in lessons" class="h-full flex gap-2 bg-primary-400 text-medium font-bold capitalize p-2 rounded-md cursor-pointer hover:bg-primary-600" @click="openLesson(lesson.slug)">
           <span>{{ lesson.id }}.</span>
           <span>{{ lesson.title }}</span>
         </li>

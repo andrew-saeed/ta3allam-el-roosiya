@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 <template>
     <nav class="flex justify-center">
         <RouterLink to="/">{{ $t('message.nav.hello') }}</RouterLink>
-        <RouterLink to="/start">{{ $t('message.nav.start') }}</RouterLink>
+        <RouterLink to="/lessons">{{ $t('message.nav.lessons') }}</RouterLink>
     </nav>
 </template>
 <style scoped>

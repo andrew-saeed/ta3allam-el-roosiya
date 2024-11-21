@@ -1,13 +1,11 @@
 <script setup>
 import { onMounted, useTemplateRef } from 'vue'
-import { useAppStore } from '@/stores/app'
 
 import Nav from './Nav.vue'
 import LangPicker from './LangPicker.vue'
 import ModePicker from './ModePicker.vue'
 
 const header = useTemplateRef('header')
-const appStore = useAppStore()
 
 onMounted(() => {
     header.value.style.maxHeight = `${document.body.scrollHeight}px`
@@ -17,7 +15,7 @@ onMounted(() => {
 
 <template>
 
-    <header ref="header" class="self-center w-full transition-[width,max-height,opacity] duration-300 ease-in-out overflow-hidden" :class="{'!w-0 !max-h-0 opacity-0': appStore.appContentExpand}">
+    <header ref="header" class="self-center w-full transition-[width,max-height,opacity] duration-300 ease-in-out overflow-hidden">
         <div class="header__box pb-12 md:pb-0">
             <section class="text-center capitalize">
                 <div class="ctrls flex justify-between">

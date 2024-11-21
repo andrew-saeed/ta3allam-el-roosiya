@@ -11,11 +11,11 @@ const i18n = createI18n({
                     'description': 'رحلتك مع اللغة الروسية تبدأ هنا مع مجموعة متنوعة من الدروس والتمارين.'
                 },
                 'nav': {
-                    'start': 'ابدأ',
+                    'lessons': 'ابدأ',
                     'hello': 'مرحباً'
                 },
                 'pages': {
-                    'start': {
+                    'lessons': {
                         'title': 'الدروس'
                     },
                     'home': {
@@ -34,11 +34,11 @@ const i18n = createI18n({
                     'description': 'your journey with the Russian language begins here with a variety of lessons and exercises.'
                 },
                 'nav': {
-                    'start': 'start',
+                    'lessons': 'lessons',
                     'hello': 'hello'
                 },
                 'pages': {
-                    'start': {
+                    'lessons': {
                         'title': 'lessons'
                     },
                     'home': {
