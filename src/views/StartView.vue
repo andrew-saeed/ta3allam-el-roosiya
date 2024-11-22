@@ -23,7 +23,7 @@ const openLesson = (slug:string) => {
       <ul class="w-full md:absolute top-0 left-0 grid gap-8 md:px-2 pb-8">
         <li v-for="lesson in lessons" class="h-full flex gap-2 bg-primary-400 text-medium font-bold capitalize p-2 rounded-md cursor-pointer hover:bg-primary-600" @click="openLesson(lesson.slug)">
           <span>{{ lesson.id }}.</span>
-          <span>{{ lesson.title }}</span>
+          <span>{{ $t(`message.pages.lessons.list['${lesson.id}']`) }}</span>
         </li>
       </ul>
     </div>

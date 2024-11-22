@@ -16,7 +16,28 @@ const i18n = createI18n({
                 },
                 'pages': {
                     'lessons': {
-                        'title': 'الدروس'
+                        'title': 'الدروس',
+                        'list': {
+                            '1': 'الأبجدية',
+                            '2': 'الروسية الأساسية',
+                            '3': 'أول الأسماء',
+                            '4': 'أخلاقيات الثقافة الروسية',
+                            '5': 'الأرقام',
+                            '6': 'الأيام، الأشهر والتواريخ',
+                            '7': 'العائلة',
+                            '8': 'المهن أو الوظائف',
+                            '9': 'الدول، العواصم، السكان',
+                            '10': 'قواعد التصريف + الأفعال المفيدة',
+                            '11': 'الألوان',
+                            '12': 'المطبخ + الطعام',
+                            '13': 'الوقت',
+                            '14': 'ليلة الأفلام',
+                            '15': 'الرياضة',
+                            '16': 'الحالات',
+                            '17': 'حروف الجر + الصفات',
+                            '18': 'في المدينة',
+                            '19': 'السفر'
+                        }
                     },
                     'alphabet': {
                         'title': 'الأبجدية'
@@ -65,7 +86,7 @@ const i18n = createI18n({
                 },
                 'examples': {
                     'alphabet': {
-                        'а': 'أَ - فتحة - أَب',
+                        'а': 'أَ - أَب',
                         'б': 'ب - بَاب',
                         'в': 'ڤ - ڤِيزَا',
                         'г': 'غ - خفيفة قريبة من د - غَابَة',
@@ -114,7 +135,28 @@ const i18n = createI18n({
                 },
                 'pages': {
                     'lessons': {
-                        'title': 'lessons'
+                        'title': 'lessons',
+                        'list': {
+                            '1': 'alphabet',
+                            '2': 'basic russian',
+                            '3': 'first nouns',
+                            '4': 'russian culture ethics',
+                            '5': 'numbers',
+                            '6': 'days, months and dates',
+                            '7': 'family',
+                            '8': 'professions or occupations',
+                            '9': 'countries, capitals, inhabitants',
+                            '10': 'conjugation rules + useful verbs',
+                            '11': 'colors',
+                            '12': 'kitchen + food',
+                            '13': 'time',
+                            '14': 'movie night',
+                            '15': 'sports',
+                            '16': 'cases',
+                            '17': 'prepositions + adjectives',
+                            '18': 'in the city',
+                            '19': 'travel'
+                        }
                     },
                     'alphabet': {
                         'title': 'alphabet'
