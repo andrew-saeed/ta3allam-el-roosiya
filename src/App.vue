@@ -9,7 +9,7 @@ import MainHeader from './components/MainHeader.vue'
 <template>
   <AppLayout>
     <MainHeader />
-    <main class="w-full grow bg-primary-900 dark:bg-surface-700 text-surface-0 px-4 py-2 rounded-md">
+    <main class="w-full">
       <RouterView @expandPage="isExpanded = $event" />
     </main>
   </AppLayout>

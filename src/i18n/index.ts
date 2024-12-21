@@ -156,6 +156,9 @@ const i18n = createI18n({
                             '17': 'prepositions + adjectives',
                             '18': 'in the city',
                             '19': 'travel'
+                        },
+                        'keyWords': {
+                            'commingSoon': 'comming soon'
                         }
                     },
                     'alphabet': {

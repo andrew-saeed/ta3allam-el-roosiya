@@ -1,22 +1,13 @@
 <script setup>
-import { onMounted, useTemplateRef } from 'vue'
-
 import Nav from './Nav.vue'
 import LangPicker from './LangPicker.vue'
 import ModePicker from './ModePicker.vue'
-
-const header = useTemplateRef('header')
-
-onMounted(() => {
-    header.value.style.maxHeight = `${document.body.scrollHeight}px`
-    header.value.firstChild.style.minWidth = `${header.value.scrollWidth - 32}px`
-})
 </script>
 
 <template>
 
-    <header ref="header" class="self-center w-full transition-[width,max-height,opacity] duration-300 ease-in-out overflow-hidden">
-        <div class="header__box pb-12 md:pb-0">
+    <header class="md:sticky top-0 left-0 w-full md:h-svh md:flex md:items-center">
+        <div class="header__box w-full px-4 max-md:py-12 md:pb-0">
             <section class="text-center capitalize space-y-12">
                 <div class="ctrls flex justify-between">
                     <LangPicker />

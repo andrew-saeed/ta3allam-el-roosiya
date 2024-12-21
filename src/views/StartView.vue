@@ -18,15 +18,25 @@ const openLesson = (slug:string) => {
 
 <template>
 
-  <PageLayout class="h-full grid grid-rows-[min-content_1fr]">
-    <div class="h-full relative overflow-auto">
-      <ul class="w-full md:absolute top-0 left-0 grid gap-8 md:px-2 pb-8">
-        <li v-for="lesson in lessons" class="h-full flex gap-2 bg-primary-400 text-medium font-bold capitalize p-2 rounded-md cursor-pointer hover:bg-primary-600" @click="openLesson(lesson.slug)">
+  <PageLayout>
+    <ul class="w-full grid gap-8 pb-8">
+      <li 
+        v-for="lesson in lessons" 
+        :class="[
+          'h-full text-medium font-bold capitalize p-2 rounded-md opacity-50 transition', 
+          {'bg-primary-400 cursor-pointer hover:bg-primary-600 !opacity-100': lesson.available}
+        ]" 
+        @click="openLesson(lesson.slug)"
+      >
+        <p class="flex gap-2">
           <span>{{ lesson.id }}.</span>
           <span>{{ $t(`message.pages.lessons.list['${lesson.id}']`) }}</span>
-        </li>
-      </ul>
-    </div>
+        </p>
+        <p v-show="!lesson.available" class="inline-block text-sm-1 border border-surface-50 px-1 mt-1 rounded-lg">
+          {{ $t('message.pages.lessons.keyWords.commingSoon') }}
+        </p>
+      </li>
+    </ul>
   </PageLayout>
 
 </template>
