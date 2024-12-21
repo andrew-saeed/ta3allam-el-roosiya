@@ -7,7 +7,7 @@ import ModePicker from './ModePicker.vue'
 <template>
 
     <header class="md:sticky top-0 left-0 w-full md:h-svh md:flex md:items-center">
-        <div class="header__box w-full px-4 max-md:py-12 md:pb-0">
+        <div class="header__box w-full px-4 max-md:py-12">
             <section class="text-center capitalize space-y-12">
                 <div class="ctrls flex justify-between">
                     <LangPicker />

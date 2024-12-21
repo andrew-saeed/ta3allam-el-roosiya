@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 const useLessonsStore = defineStore('lessons', () => {
 
-    const lessons = [
+    const data = [
         {id: 1, title: 'alphabet', slug: 'alphabet',  available: true},
         {id: 2, title: 'basic russian', slug: 'basic-russian', available: false},
         {id: 3, title: 'first nouns', slug: 'first-nouns',available: false},
@@ -24,7 +24,7 @@ const useLessonsStore = defineStore('lessons', () => {
         {id: 19, title: 'travel', slug: 'travel',available: false},
     ]
 
-    return { lessons }
+    return { data }
 })
 
 export default useLessonsStore

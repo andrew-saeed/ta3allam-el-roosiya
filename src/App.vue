@@ -10,7 +10,7 @@ import MainHeader from './components/MainHeader.vue'
   <AppLayout>
     <MainHeader />
     <main class="w-full">
-      <RouterView @expandPage="isExpanded = $event" />
+      <RouterView />
     </main>
   </AppLayout>
 </template>
