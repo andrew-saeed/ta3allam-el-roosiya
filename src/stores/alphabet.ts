@@ -75,7 +75,7 @@ const useAlphabetStore = defineStore('alphabet', () => {
         {id:24, c: 'Ц', s: 'ц', sound: 'tse.mp3', examples: [
             {id: 'цена', word: 'price', sound: 'цена.mp3', targetChar: 'Ц'}
         ]},
-        {id:25, c: 'Ч', s: 'ч', sound: 'sche.mp3', examples: [
+        {id:25, c: 'Ч', s: 'ч', sound: 'tsche.mp3', examples: [
             {id: 'читать', word: 'read', sound: 'читать.mp3', targetChar: 'Ч'}
         ]},
         {id:26, c: 'Ш', s: 'ш', sound: 'scha.mp3', examples: [

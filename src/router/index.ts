@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 import LessonView from '@/views/LessonView.vue'
-import alphapet from '@/views/alphabet/index.vue'
+import Alphapet from '@/views/Alphabet/Index.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,8 +21,8 @@ const router = createRouter({
       name: 'alphabet',
       component: LessonView,
       children: [
-        {path: '', name: 'lesson', component: alphapet},
-        {path: 'quiz', name: 'quiz', component: () => import('../views/alphabet/quiz.vue')}
+        {path: '', name: 'lesson', component: Alphapet},
+        {path: 'quiz', name: 'quiz', component: () => import('../views/Alphabet/Quiz.vue')}
       ]
     },
   ],
