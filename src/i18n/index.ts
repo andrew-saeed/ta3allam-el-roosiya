@@ -37,10 +37,19 @@ const i18n = createI18n({
                             '17': 'حروف الجر + الصفات',
                             '18': 'في المدينة',
                             '19': 'السفر'
+                        },
+                        'keyWords': {
+                            'comingSoon': 'قريباً'
                         }
                     },
                     'alphabet': {
-                        'title': 'الأبجدية'
+                        'title': 'الأبجدية',
+                        'btns': {
+                            'ready_for_a_quiz': 'مستعد للإختبار'
+                        },
+                        'quiz': {
+                            'title': 'إختبار الابجدية'
+                        }
                     },
                     'home': {
                         'title': 'عن التطبيق',
@@ -158,11 +167,17 @@ const i18n = createI18n({
                             '19': 'travel'
                         },
                         'keyWords': {
-                            'commingSoon': 'comming soon'
+                            'comingSoon': 'coming soon'
                         }
                     },
                     'alphabet': {
-                        'title': 'alphabet'
+                        'title': 'alphabet',
+                        'btns': {
+                            'ready_for_a_quiz': 'ready for a quiz'
+                        },
+                        'quiz': {
+                            'title': 'alphabet quiz'
+                        }
                     },
                     'home': {
                         'title': 'about the app',

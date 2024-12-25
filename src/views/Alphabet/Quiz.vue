@@ -50,7 +50,7 @@ const generateQuiz = ()  => {
 </script>
 
 <template>
-    <PageLayout title="alphabet quiz" class="grid grid-rows-[min-content_1fr]">
+    <PageLayout :title="$t('message.pages.alphabet.quiz.title')" class="grid grid-rows-[min-content_1fr]">
         <div class="h-full flex justify-center items-center">
             <ul class="relative w-full">
                 <li class="sticky top-0 left-0 z-20 flex justify-end pt-8">

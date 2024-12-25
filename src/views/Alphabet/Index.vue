@@ -28,7 +28,7 @@ const playSound = (file) => {
 <template>
     <PageLayout :title="$t('message.pages.alphabet.title')">
         <p class="sticky top-3 left-0 flex justify-center pb-4">
-            <IconTextBtn text="ready for a quiz" class="medium" @click="rouer.push({path:'/alphabet/quiz'})">
+            <IconTextBtn :text="$t('message.pages.alphabet.btns.ready_for_a_quiz')" class="medium" @click="rouer.push({path:'/alphabet/quiz'})">
                 <Quiz/>
             </IconTextBtn>
         </p>

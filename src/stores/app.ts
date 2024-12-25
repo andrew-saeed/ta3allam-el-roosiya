@@ -20,7 +20,6 @@ export const useAppStore = defineStore('app', () => {
     {id: 'ar', name: 'العربية', dir: 'rtl'},
     {id: 'en', name: 'english', dir: 'ltr'},
   ])
-  const appContentExpand = ref(false)
 
   /* Helpers */
   const updateLangUi = (id:LangID, dir:LangDir) => {
@@ -52,17 +51,11 @@ export const useAppStore = defineStore('app', () => {
     localStorage.setItem("terAppConfig", JSON.stringify(terAppConfig))
   }
 
-  const toggleAppContentExpand = () => {
-    appContentExpand.value = !appContentExpand.value
-  }
-
   return {
     langs, 
     currentLang,
     darkMode,
-    appContentExpand,
     toggleLang,
-    toggleDarkMode,
-    toggleAppContentExpand
+    toggleDarkMode
   }
 })

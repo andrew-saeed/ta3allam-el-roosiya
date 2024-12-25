@@ -1,8 +1,15 @@
 import { defineStore } from 'pinia'
 
+export type lessonsListItem = {
+    id: number,
+    title: string,
+    slug: string,
+    available: boolean
+}
+
 const useLessonsStore = defineStore('lessons', () => {
 
-    const data = [
+    const data:lessonsListItem[] = [
         {id: 1, title: 'alphabet', slug: 'alphabet',  available: true},
         {id: 2, title: 'basic russian', slug: 'basic-russian', available: false},
         {id: 3, title: 'first nouns', slug: 'first-nouns',available: false},
