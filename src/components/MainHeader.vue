@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Nav from './Nav.vue'
 import LangPicker from './LangPicker.vue'
 import ModePicker from './ModePicker.vue'

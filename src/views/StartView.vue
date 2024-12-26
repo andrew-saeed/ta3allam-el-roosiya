@@ -4,12 +4,12 @@ import { useRouter } from 'vue-router'
 import PageLayout from '@/layouts/PageLayout.vue'
 
 import useLessonsStore from '@/stores/lessons'
-import type { lessonsListItem } from '@/stores/lessons'
+import type { LessonsListItem } from '@/stores/lessons'
 
 const router = useRouter()
 const { data } = useLessonsStore()
 
-const openLesson = (lesson:lessonsListItem) => {
+const openLesson = (lesson:LessonsListItem) => {
   if(!lesson.available) return
 
   router.push({path: `${lesson.slug}`})

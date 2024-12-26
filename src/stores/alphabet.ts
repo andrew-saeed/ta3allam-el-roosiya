@@ -1,8 +1,21 @@
 import { defineStore } from 'pinia'
 
+export type AlphabetItem = {
+    id: number;
+    c: string;
+    s: string;
+    sound: string;
+    examples: {
+        id: string;
+        word: string;
+        sound: string;
+        targetChar: string;
+    }[];
+}
+
 const useAlphabetStore = defineStore('alphabet', () => {
 
-    const data = [
+    const data:AlphabetItem[] = [
         {id:1, c: 'А', s: 'а', sound: 'a.mp3', examples: [
             {id: 'арбуз', word: 'watermelon', sound: 'Арбуз.mp3', targetChar: 'А'}
         ]},

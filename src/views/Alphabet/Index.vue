@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
@@ -12,18 +12,11 @@ import TargetWordChar from '@/components/TargetWordChar.vue'
 
 import useAlphabetStore from '@/stores/alphabet'
 
+import { useAudio } from '@/composables/useAudio'
+
 const rouer = useRouter()
 const { data } = useAlphabetStore()
-
-const audio = new Audio()
-onMounted(() => {
-    audio.volume = 1
-})
-
-const playSound = (file) => {
-    audio.src = `/${file}`
-    audio.play()
-}
+const { playSound } = useAudio()
 </script>
 <template>
     <PageLayout :title="$t('message.pages.alphabet.title')">
