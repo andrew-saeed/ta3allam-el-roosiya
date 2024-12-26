@@ -5,7 +5,7 @@ import { setCacheNameDetails } from 'workbox-core'
 export default null
 declare let self: ServiceWorkerGlobalScope
 
-const VERSION = '12'
+const VERSION = '13'
 const APPNAME = 'telroosiya'
 
 function getCacheVersion() {
@@ -18,37 +18,12 @@ precacheAndRoute(self.__WB_MANIFEST)
 self.addEventListener('fetch', (event:FetchEvent) => event.respondWith(cacheThenNetwork(event)))
 async function cacheThenNetwork(event:FetchEvent) {
 
-    // Start the network request immediately
-    const networkPromise = fetch(event.request)
+    const cache = await caches.open(getCacheVersion())
+    const cachedResponse = await cache.match(event.request)
+    if(cachedResponse) return cachedResponse
 
-    try {
-        // Try to get from cache first
-        const cache = await caches.open(getCacheVersion())
-        const cachedResponse = await cache.match(event.request)
-        
-        if (cachedResponse) {
-            // Return cached data immediately
-            // But still update cache with fresh data in the background
-            event.waitUntil(
-                networkPromise.then(networkResponse => {
-                    return cache.put(event.request, networkResponse.clone())
-                })
-            )
-            return cachedResponse
-        }
-
-        // If not in cache, wait for network response
-        const networkResponse = await networkPromise
-        // Clone before storing in cache since response body can only be used once
-        await cache.put(event.request, networkResponse.clone())
-        return networkResponse
-
-    } catch (error) {
-        
-        // If both cache and network fail, return error response
-        console.error('Cache then network failed:', error)
-        return new Response('Cache and network both failed', { status: 500 })
-    }
+    const networkResponse = await fetch(event.request)
+    return networkResponse
 }
 
 self.addEventListener('activate', event => event.waitUntil(activateServiceWorker()))
