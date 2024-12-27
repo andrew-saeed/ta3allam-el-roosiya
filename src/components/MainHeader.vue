@@ -2,6 +2,8 @@
 import Nav from './Nav.vue'
 import LangPicker from './LangPicker.vue'
 import ModePicker from './ModePicker.vue'
+import Logo from './Logo.vue'
+import AppHeader from './AppHeader.vue'
 </script>
 
 <template>
@@ -13,9 +15,9 @@ import ModePicker from './ModePicker.vue'
                     <LangPicker />
                     <ModePicker />
                 </div>
-                <img class="w-40 h-40 mx-auto" src="/logo.png" alt="">
+                <Logo />                
                 <div class="hero">
-                    <p class="text-xlarge leading-xlarge text-primary-400 font-bold">{{ $t('message.header.title') }}</p>
+                    <AppHeader />
                     <p class="text-medium leading-medium mt-6">{{ $t('message.header.description') }}</p>
                 </div>
             </section>
