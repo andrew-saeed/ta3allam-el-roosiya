@@ -9,7 +9,7 @@ type LangID = Lang['id']
 type LangDir = Lang['dir']
 type AppConfig = {lang: LangID, darkMode: boolean}
 
-const defaultConfig = `{"lang": "ar", "darkMode": false}`
+const defaultConfig = `{"lang": "ar", "darkMode": true}`
 
 export const useAppStore = defineStore('app', () => {
 

@@ -84,10 +84,10 @@ const generateQuiz = ()  => {
                             @click="question.answered = true"
                         >
                             <span class="absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%]">{{ answer.c }}</span>
-                            <span v-show="question.answered && answer.id === question.correctAnswer" class="absolute top-0 left-full w-[2rem] h-[2rem]">
+                            <span v-show="question.answered && answer.id === question.correctAnswer" class="absolute check-icon w-[2rem] h-[2rem]">
                                 <Check />
                             </span>
-                            <span v-show="question.answered && answer.id !== question.correctAnswer" class="absolute top-0 left-full w-[1.5rem] h-[1.5rem]">
+                            <span v-show="question.answered && answer.id !== question.correctAnswer" class="absolute x-icon w-[1.5rem] h-[1.5rem]">
                                 <X />
                             </span>
                         </li>
@@ -98,3 +98,15 @@ const generateQuiz = ()  => {
         </div>
     </PageLayout>
 </template>
+
+<style lang="scss">
+    .check-icon, .x-icon {
+        top: 0;
+        left: 100%;
+
+        html[dir="rtl"] & {
+            left: unset;
+            right: 100%;
+        }
+    }
+</style>

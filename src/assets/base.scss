@@ -60,7 +60,7 @@
   }
 
   ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 7px; /* Width of the scrollbar */
     height: 10px; /* Height of the scrollbar (for horizontal scrollbars) */
   }
 
@@ -116,4 +116,13 @@
   --p-text-hover-color: var(--p-surface-0);
   --p-text-muted-color: var(--p-surface-400);
   --p-text-hover-muted-color: var(--p-surface-300);
+}
+
+// Fonts
+.font-base {
+  font-family: "Lato", serif;
+  
+  html[dir="rtl"] & {
+    font-family: "Rubik", serif;
+  }
 }
