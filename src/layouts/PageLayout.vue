@@ -22,3 +22,9 @@ defineProps<{
     </div>
 
 </template>
+
+<style lang="scss">
+.safari-fix-h-full #page__content {
+  height: 100%;
+}
+</style>

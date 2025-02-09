@@ -4,7 +4,7 @@ import Github from '@/components/icons/Github.vue'
 </script>
 
 <template>
-  <PageLayout :title="$t('message.pages.home.title')" class="h-full grid gap-4 grid-rows-[min-content_1fr] px-4">
+  <PageLayout :title="$t('message.pages.home.title')" class="h-full grid gap-4 grid-rows-[min-content_1fr] px-4 safari-fix-h-full">
     <section class="h-full flex flex-col gap-4 text-base-1 leading-medium">
       <div class="space-y-2">
         <i18n-t keypath="message.pages.home.description" scope="global">
@@ -30,7 +30,7 @@ import Github from '@/components/icons/Github.vue'
   </PageLayout>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .hello-box {
   background-image: url('/hello.png');
   background-size: contain;

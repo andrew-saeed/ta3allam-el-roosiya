@@ -21,7 +21,7 @@ import AppHeader from './AppHeader.vue'
                     <p class="text-medium leading-medium mt-6">{{ $t('message.header.description') }}</p>
                 </div>
             </section>
-            <div class="mt-12">
+            <div class="mt-6">
                 <Nav />
             </div>
         </div>
