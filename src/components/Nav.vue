@@ -19,8 +19,8 @@ import { RouterLink } from 'vue-router'
         transition: background-color 0.3s ease-in-out;
 
         &:not(.router-link-exact-active):hover {
-            background-color: var(--p-primary-600);
-            color: var(--p-surface-50);
+            background-color: var(--color-primary-600);
+            color: var(--color-surface-50);
         }
     }
 </style>

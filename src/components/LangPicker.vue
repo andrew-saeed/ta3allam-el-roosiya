@@ -10,5 +10,6 @@ const { langs, currentLang, toggleLang } = useAppStore()
         :options="langs" 
         optionLabel="name" 
         placeholder="Select a City" 
+        class="theme-select"
         @change="toggleLang"/>
 </template>

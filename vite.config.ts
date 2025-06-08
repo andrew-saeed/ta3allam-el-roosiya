@@ -1,7 +1,8 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
@@ -10,7 +11,7 @@ export default defineConfig({
   server: {
     port: 4200
   },
-  plugins: [ vue(), vueDevTools(), VitePWA({
+  plugins: [ tailwindcss(), vue(), vueDevTools(), VitePWA({
     scope: '/',
     srcDir: 'src',
     filename: 'sw.ts',

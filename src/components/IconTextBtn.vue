@@ -22,7 +22,8 @@ defineProps<{
                 max-height: 1.5rem;
             }
             .btn-txt {
-                @apply text-base-2;
+                font-size: var(--text-base-2);
+                line-height: var(--text-base-2--line-height);
             }
         }
     }
