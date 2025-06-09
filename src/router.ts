@@ -14,7 +14,7 @@ const router = createRouter({
     {
       path: '/lessons',
       name: 'lessons',
-      component: () => import('../views/StartView.vue'),
+      component: () => import('./views/StartView.vue'),
     },
     {
       path: '/alphabet',
@@ -22,11 +22,23 @@ const router = createRouter({
       component: LessonView,
       children: [
         {path: '', name: 'lesson', component: Alphapet},
-        {path: 'quiz', name: 'quiz', component: () => import('../views/Alphabet/Quiz.vue')}
+        {path: 'quiz', name: 'quiz', component: () => import('./views/Alphabet/Quiz.vue')}
       ]
     },
   ],
-  linkActiveClass: 'bg-blue-400 text-surface-50 shadow-[1px_1px_4px_1px_rgba(18,18,23,0.3)]'
+  linkActiveClass: 'bg-blue-400 text-surface-50 shadow-[1px_1px_4px_1px_rgba(18,18,23,0.3)]',
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth'
+      }
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 export default router

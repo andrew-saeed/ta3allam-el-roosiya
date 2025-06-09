@@ -27,10 +27,13 @@ const { data } = useAlphabetStore()
 const { arr, shuffle } = useShuffleArr([...data])
 const { playSound } = useAudio()
 const quiz = ref<Quiz>([])
+const quizeList = ref()
 
 onMounted(() => { generateQuiz() })
 
 const generateQuiz = ()  => {
+
+    quizeList.value?.scrollIntoView({behavior: 'smooth'})
 
     shuffle()
 
@@ -55,13 +58,12 @@ const generateQuiz = ()  => {
     })
 }
 
-
 </script>
 
 <template>
     <PageLayout :title="$t('message.pages.alphabet.quiz.title')" class="grid grid-rows-[min-content_1fr]">
         <div class="h-full flex justify-center items-center">
-            <ul class="relative w-full">
+            <ul id="quiz-list" class="relative w-full" ref="quizeList">
                 <li class="sticky top-0 left-0 z-20 flex justify-end pt-8">
                     <IconBtn class="small mx-4" @click="generateQuiz()">
                         <Refresh />

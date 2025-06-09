@@ -19,7 +19,7 @@ const openLesson = (lesson:LessonsListItem) => {
 <template>
 
   <PageLayout>
-    <ul class="w-full grid gap-8 pb-8">
+    <ul id="lessons-list" class="w-full grid gap-8 pb-8">
       <li 
         v-for="lesson in data" 
         :class="[

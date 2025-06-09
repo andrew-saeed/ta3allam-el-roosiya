@@ -1,13 +1,13 @@
-import './assets/base.css'
+import './base.css'
 
-import Aura from "@primeuix/themes/aura"
+import Aura from '@primeuix/themes/aura'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import PrimeVue from 'primevue/config'
 
 import App from './App.vue'
-import router from './router'
-import i18n from './i18n'
+import router from './router.ts'
+import i18n from './i18n.ts'
 
 const app = createApp(App)
 app.use(createPinia())
