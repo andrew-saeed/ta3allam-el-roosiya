@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 
-import PageLayout from '@/layouts/PageLayout.vue'
-
 import useLessonsStore from '@/stores/lessons'
 import type { LessonsListItem } from '@/stores/lessons'
 
@@ -12,7 +10,7 @@ const { data } = useLessonsStore()
 const openLesson = (lesson:LessonsListItem) => {
   if(!lesson.available) return
 
-  router.push({path: `${lesson.slug}`})
+  router.push({path: `${lesson.slug}`, hash:`#page__header`})
 }
 </script>
 

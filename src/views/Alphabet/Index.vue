@@ -1,14 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-
-import PageLayout from '@/layouts/PageLayout.vue'
-
-import IconBtn from '@/components/IconBtn.vue'
-import IconTextBtn from '@/components/IconTextBtn.vue'
-import Speaker from '@/components/icons/Speaker.vue'
-import Quiz from '@/components/icons/Quiz.vue'
-import TargetWordChar from '@/components/TargetWordChar.vue'
 
 import useAlphabetStore from '@/stores/alphabet'
 
@@ -21,11 +12,11 @@ const { playSound } = useAudio()
 <template>
     <PageLayout :title="$t('message.pages.alphabet.title')">
         <p class="sticky top-3 left-0 flex justify-center pb-4">
-            <IconTextBtn :text="$t('message.pages.alphabet.btns.ready_for_a_quiz')" class="medium" @click="rouer.push({path:'/alphabet/quiz'})">
+            <IconTextBtn :text="$t('message.pages.alphabet.btns.ready_for_a_quiz')" class="medium" @click="rouer.push({path:'/alphabet/quiz', hash:'#page__header'})">
                 <Quiz/>
             </IconTextBtn>
         </p>
-        <ul class="grid gap-8 md:px-2 py-8 space-y-10 overflow-auto">
+        <ul id="lessons-list" class="grid gap-8 md:px-2 py-8 space-y-10 overflow-auto">
             <li v-for="char in data" class="text-medium-1 leading-medium-1">
                 <div>
                     <div class="flex gap-4">

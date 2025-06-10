@@ -5,6 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import Components from 'unplugin-vue-components/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -44,6 +45,9 @@ export default defineConfig({
       suppressWarnings: true,
       type: 'module',
     },
+  }), Components({
+    dirs: ['src/components', 'src/layouts'],
+    extensions: ['vue'],
   })],
   resolve: {
     alias: {

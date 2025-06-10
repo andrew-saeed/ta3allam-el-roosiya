@@ -1,8 +1,3 @@
-<script setup lang="ts">
-import PageLayout from '@/layouts/PageLayout.vue'
-import Github from '@/components/icons/Github.vue'
-</script>
-
 <template>
   <PageLayout :title="$t('message.pages.home.title')" class="h-full grid gap-4 grid-rows-[min-content_1fr] px-4 safari-fix-h-full">
     <section class="h-full flex flex-col gap-4 text-base-1 leading-medium">

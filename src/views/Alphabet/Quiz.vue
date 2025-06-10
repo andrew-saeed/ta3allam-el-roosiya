@@ -1,14 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 
-import PageLayout from '@/layouts/PageLayout.vue'
-
-import IconBtn from '@/components/IconBtn.vue'
-import Speaker from '@/components/icons/Speaker.vue'
-import X from '@/components/icons/X.vue'
-import Check from '@/components/icons/Check.vue'
-import Refresh from '@/components/icons/Refresh.vue'
-
 import useAlphabetStore from '@/stores/alphabet'
 import type { AlphabetItem } from '@/stores/alphabet'
 
