@@ -28,6 +28,10 @@ const router = createRouter({
   ],
   linkActiveClass: 'bg-blue-400 text-surface-50 shadow-[1px_1px_4px_1px_rgba(18,18,23,0.3)]',
   scrollBehavior(to, from, savedPosition) {
+    if (window.innerWidth >= 768) {
+      return false
+    }
+
     if (savedPosition) {
       return savedPosition
     } else if (to.hash) {

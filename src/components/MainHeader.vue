@@ -18,7 +18,7 @@ import AppHeader from './AppHeader.vue'
                 <Logo />                
                 <div class="hero">
                     <AppHeader />
-                    <p class="text-medium leading-medium mt-6">{{ $t('message.header.description') }}</p>
+                    <p class="text-medium leading-medium">{{ $t('message.header.description') }}</p>
                 </div>
             </section>
             <div class="mt-6">
