@@ -22,9 +22,7 @@ const { playSound } = useAudio()
                     <div class="flex gap-4">
                         <h2 class="font-bold">{{ char.c }} {{ char.s }}</h2>
                         <p>
-                            <IconBtn class="small" @click="playSound(char.sound)">
-                                <Speaker />
-                            </IconBtn>
+                            <SoundBtn :file="char.sound" class="big" />
                         </p>
                     </div>
                     <p class="flex items-center">{{ $t(`message.examples.alphabet['${char.s}']`) }}</p>
@@ -34,9 +32,7 @@ const { playSound } = useAudio()
                         <div class="flex gap-8 mt-6">
                             <TargetWordChar :word="example.id" :target="example.targetChar" />
                             <p class="flex items-center">
-                                <IconBtn class="small" @click="playSound(example.sound)">
-                                    <Speaker />
-                                </IconBtn>
+                                <SoundBtn :file="example.sound" class="small" />
                             </p>
                         </div>
                         <p class="capitalize">{{ $t(`message.dictionary['${example.id}']`) }}</p>

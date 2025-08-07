@@ -26,8 +26,10 @@ declare module 'vue' {
     Refresh: typeof import('./src/components/icons/Refresh.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SoundBtn: typeof import('./src/components/SoundBtn.vue')['default']
     Speaker: typeof import('./src/components/icons/Speaker.vue')['default']
     TargetWordChar: typeof import('./src/components/TargetWordChar.vue')['default']
+    WaveSignal: typeof import('./src/components/icons/WaveSignal.vue')['default']
     X: typeof import('./src/components/icons/X.vue')['default']
   }
 }

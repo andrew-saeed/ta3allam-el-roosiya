@@ -5,7 +5,6 @@ import useAlphabetStore from '@/stores/alphabet'
 import type { AlphabetItem } from '@/stores/alphabet'
 
 import { useShuffleArr } from '@/composables/useShuffleArr'
-import { useAudio } from '@/composables/useAudio'
 
 type QuizItem = { 
     answered: boolean; 
@@ -17,7 +16,6 @@ type Quiz = QuizItem[]
 
 const { data } = useAlphabetStore()
 const { arr, shuffle } = useShuffleArr([...data])
-const { playSound } = useAudio()
 const quiz = ref<Quiz>([])
 const quizeList = ref()
 
@@ -67,9 +65,7 @@ const generateQuiz = ()  => {
                     :key="question.correctAnswer"
                 >
                     <p class="relative z-20">
-                        <IconBtn class="big" @click="playSound(question.sound)">
-                            <Speaker />
-                        </IconBtn>
+                        <SoundBtn :file="question.sound" class="big" />
                     </p>
                     <ul class="flex flex-col gap-4 pt-8">
                         <li
