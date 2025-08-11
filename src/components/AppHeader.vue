@@ -1,5 +1,5 @@
 <template>
-    <p class="pb-3 text-xlarge text-primary-400 font-bold max-lg:leading-16">{{ $t('message.header.title') }}</p>
+    <p class="pb-3 text-xlarge text-primary-400 font-bold capitalize max-lg:leading-16">{{ $t('message.header.title') }}</p>
 </template>
 
 <style lang="scss" scoped>

@@ -10,7 +10,7 @@ import AppHeader from './AppHeader.vue'
 
     <header class="md:sticky top-0 left-0 w-full md:h-svh md:flex md:items-center">
         <div class="header__box w-full px-4 max-md:py-12">
-            <section class="text-center capitalize space-y-12">
+            <section class="text-center space-y-12">
                 <div class="ctrls flex justify-between">
                     <LangPicker />
                     <ModePicker />
@@ -18,7 +18,7 @@ import AppHeader from './AppHeader.vue'
                 <Logo />                
                 <div class="hero">
                     <AppHeader />
-                    <p class="text-medium leading-medium">{{ $t('message.header.description') }}</p>
+                    <p class="text-base-1">{{ $t('message.header.description') }}</p>
                 </div>
             </section>
             <div class="mt-6">

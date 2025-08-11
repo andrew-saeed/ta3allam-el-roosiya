@@ -138,7 +138,7 @@ const i18n = createI18n({
             message: {
                 'header': {
                     'title': 'learn russian',
-                    'description': 'your journey with the Russian language begins here with a variety of lessons and exercises.'
+                    'description': 'Your journey with the Russian language begins here with a variety of lessons and exercises.'
                 },
                 'nav': {
                     'lessons': 'lessons',
@@ -227,7 +227,7 @@ const i18n = createI18n({
                 },
                 'examples': {
                     'alphabet': {
-                        'а': 'a in "**f**ather"',
+                        'а': 'a in "f**a**ther"',
                         'б': 'b in "**b**ook"',
                         'в': 'v in "**v**ery"',
                         'г': 'g in "**g**oat"',

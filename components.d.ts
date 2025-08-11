@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
     AppLayout: typeof import('./src/layouts/AppLayout.vue')['default']
+    BurgerMenu: typeof import('./src/components/icons/BurgerMenu.vue')['default']
     Check: typeof import('./src/components/icons/Check.vue')['default']
     Expand: typeof import('./src/components/icons/Expand.vue')['default']
     Github: typeof import('./src/components/icons/Github.vue')['default']

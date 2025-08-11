@@ -22,7 +22,7 @@ const { playSound } = useAudio()
                     <div class="flex gap-4">
                         <h2 class="font-bold">{{ char.c }} {{ char.s }}</h2>
                         <p>
-                            <SoundBtn :file="char.sound" class="big" />
+                            <SoundBtn :file="char.sound" class="medium" />
                         </p>
                     </div>
                     <p class="flex items-center">{{ $t(`message.examples.alphabet['${char.s}']`) }}</p>

@@ -125,6 +125,12 @@
 
 @layer components {
 
+  .burger-menu {
+    @media screen and (min-width:768px) {
+      visibility: hidden; 
+    }
+  }
+
   .dark {
 
     .theme-toggle-switch {

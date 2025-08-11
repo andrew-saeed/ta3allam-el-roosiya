@@ -2,8 +2,8 @@
 import { RouterLink } from 'vue-router'
 </script>
 <template>
-    <nav class="flex justify-center">
-        <RouterLink to="/">{{ $t('message.nav.hello') }}</RouterLink>
+    <nav id="main-nav" class="flex justify-center">
+        <RouterLink to="/home#page__header">{{ $t('message.nav.hello') }}</RouterLink>
         <RouterLink to="/lessons#page__header">{{ $t('message.nav.lessons') }}</RouterLink>
     </nav>
 </template>

@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-<button class="flex items-center gap-2 bg-red-400 hover:bg-red-600 px-4 py-2 rounded-md transition">
+<button class="flex items-center gap-2 bg-red-600 hover:bg-red-400 px-4 py-2 rounded-md transition">
     <span class="svg-box">
         <slot />
     </span>
@@ -19,7 +19,6 @@ defineProps<{
         &.medium {
             .svg-box {
                 max-width: 1.5rem;
-                max-height: 1.5rem;
             }
             .btn-txt {
                 font-size: var(--text-base-2);
