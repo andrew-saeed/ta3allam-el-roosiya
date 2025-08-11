@@ -3,11 +3,13 @@ import { RouterLink } from 'vue-router'
 </script>
 <template>
     <nav id="main-nav" class="flex justify-center">
-        <RouterLink to="/home#page__header">{{ $t('message.nav.hello') }}</RouterLink>
+        <RouterLink to="/#page__header">{{ $t('message.nav.hello') }}</RouterLink>
         <RouterLink to="/lessons#page__header">{{ $t('message.nav.lessons') }}</RouterLink>
     </nav>
 </template>
 <style scoped>
+nav {
+    scroll-margin-top: 3rem;
     a {
         display: block;
         font-size: var(--ter-text-base-2);
@@ -23,4 +25,5 @@ import { RouterLink } from 'vue-router'
             color: var(--color-surface-50);
         }
     }
+}
 </style>
